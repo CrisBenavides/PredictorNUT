@@ -1,0 +1,31 @@
+---
+title: "Titulo Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+# Setip del notebook
+if(!require("knitr")){
+  install.packages("knitr")
+  library(knitr)
+}
+if(!require("rprojroot")){
+  install.packages("rprojroot")
+  library(rprojroot)
+}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+knitr::opts_chunk$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+```{r init, include=FALSE}
+source("init.R")
+```
+
+
+# Grafico ZYX
+
+```{r}
+hist(rnorm(10000))
+```
+
+
